@@ -234,8 +234,15 @@ def build_deck(ctx, deck: ParsedDeck) -> str:
 
 ## Themes
 
-| Name | Primary | Accent | Style |
+| Name | Audience | Primary | Accent |
 |---|---|---|---|
-| `consulting` | Navy `#003366` | Gold `#C9A84C` | McKinsey-style |
-| `minimal` | Black `#000000` | Gray `#555555` | Clean, sparse |
-| `dark` | Dark navy `#1A1A2E` | Red `#E94560` | Dark background |
+| `consulting` | Strategy / MBB pitch | Navy `#003366` | Gold `#C9A84C` |
+| `minimal` | Any — clean, no distraction | Black `#000000` | Gray `#555555` |
+| `dark` | Tech / product demo | Dark navy `#1A1A2E` | Red `#E94560` |
+| `startup` | VC / Series A–B pitch | Orange `#FF6B35` | Teal `#00D4AA` |
+| `academic` | Research / university | Burgundy `#5C1A1A` | Warm gold `#8B6914` |
+| `finance` | Banking / PE / hedge fund | Forest green `#1B4332` | Green `#52B788` |
+| `tech` | Engineering / SaaS / cloud | Deep blue `#0F4C81` | Cyan `#00B4D8` |
+| `government` | Public sector / policy | Dark navy `#1C2B4A` | Flag red `#C0392B` |
+| `healthcare` | Medical / pharma / clinical | Medical blue `#005B96` | Light blue `#48CAE4` |
+| `creative` | Agency / design / media | Purple `#6A0572` | Gold `#FFB703` |

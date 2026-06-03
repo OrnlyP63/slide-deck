@@ -17,7 +17,7 @@ def cli() -> None:
 @click.argument("md_file", type=click.Path(exists=True))
 @click.option("--output-dir", default="output", show_default=True)
 @click.option("--engine", default="pdflatex", type=click.Choice(["pdflatex", "lualatex"]), show_default=True)
-@click.option("--theme", default=None, type=click.Choice(["consulting", "minimal", "dark"]), help="Override deck theme")
+@click.option("--theme", default=None, type=click.Choice(["consulting", "minimal", "dark", "startup", "academic", "finance", "tech", "government", "healthcare", "creative"]), help="Override deck theme")
 def build(md_file: str, output_dir: str, engine: str, theme: str | None) -> None:
     """Parse a .md file and compile to PDF."""
     from slides.api import parse, validate, build as api_build
