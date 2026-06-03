@@ -8,7 +8,8 @@ Write `.md` → get a consulting-quality PDF. No API key required.
 ## Quick start
 
 ```bash
-uv add jinja2 click rich pydantic
+uv add jinja2 click rich pydantic          # runtime deps
+uv add --dev pytest ruff                   # dev deps
 uv run main.py build examples/ml_monitoring.md
 uv run main.py validate examples/ml_monitoring.md   # lint only
 ```
@@ -159,7 +160,7 @@ flowchart TD
 ```markdown
 # Deck Title                         ← TitleSlide
 <!-- author: Name -->                ← metadata
-<!-- theme: consulting -->           ← consulting | minimal | dark
+<!-- theme: consulting -->           ← see Themes table for all 10 options
 
 ## Section Name                      ← SectionSlide
 
@@ -229,6 +230,20 @@ def validate_deck(ctx, deck: ParsedDeck) -> list[str]:
 def build_deck(ctx, deck: ParsedDeck) -> str:
     return build(deck)
 ```
+
+---
+
+## Testing
+
+```bash
+uv run pytest                          # all tests
+uv run pytest tests/test_parser.py -v  # parser only
+uv run pytest tests/test_selector.py   # FFT only
+uv run pytest tests/test_api.py        # api only
+uv run pytest tests/test_themes.py     # compile all 10 themes
+```
+
+83 tests total: selector (22), parser (28), api (22), themes (11).
 
 ---
 
