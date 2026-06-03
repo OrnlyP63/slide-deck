@@ -6,11 +6,17 @@ from pathlib import Path
 import pytest
 
 from slides.model import (
+    AgendaSlide,
     ChartPlaceholderSlide,
+    ClosingSlide,
     ContentSlide,
     ParsedDeck,
+    QuoteSlide,
     SCRNarrativeSlide,
     SectionSlide,
+    StatsSlide,
+    TableSlide,
+    TimelineSlide,
     TitleSlide,
     TwoColumnSlide,
 )
@@ -237,6 +243,190 @@ class TestTwoColumnSlide:
         """)
         slide = parse_md(f).slides[1]
         assert not isinstance(slide, TwoColumnSlide)
+
+
+# ---------------------------------------------------------------------------
+# StatsSlide
+# ---------------------------------------------------------------------------
+
+class TestStatsSlide:
+    def test_two_stat_lines_produce_stats_slide(self, tmp_path):
+        f = _write_slide(tmp_path, "### Metrics\n**ARR:** $2.1M\n**NRR:** 94%\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, StatsSlide)
+
+    def test_three_stats_parsed(self, tmp_path):
+        f = _write_slide(tmp_path, "### Metrics\n**ARR:** $2.1M\n**NRR:** 94%\n**CAC:** $38\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, StatsSlide)
+        assert len(slide.stats) == 3
+        assert slide.stats[0].label == "ARR"
+        assert slide.stats[0].value == "$2.1M"
+        assert slide.stats[2].label == "CAC"
+
+    def test_single_stat_line_does_not_produce_stats(self, tmp_path):
+        f = _write_slide(tmp_path, "### Slide\n**ARR:** $2.1M\n- bullet\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, StatsSlide)
+
+    def test_scr_labels_not_counted_as_stats(self, tmp_path):
+        f = _write_slide(tmp_path, "### Slide\n**Situation:** x\n**Complication:** y\n**Resolution:** z\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, StatsSlide)
+
+    def test_stats_source_parsed(self, tmp_path):
+        f = _write_slide(tmp_path, "### Metrics\n**ARR:** $2.1M\n**NRR:** 94%\n> Source: Internal\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, StatsSlide)
+        assert slide.source == "Internal"
+
+
+# ---------------------------------------------------------------------------
+# QuoteSlide
+# ---------------------------------------------------------------------------
+
+class TestQuoteSlide:
+    def test_quoted_blockquote_produces_quote_slide(self, tmp_path):
+        f = _write_slide(tmp_path, '### Slide\n> "Simplicity is the ultimate sophistication."\n')
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, QuoteSlide)
+
+    def test_quote_text_extracted(self, tmp_path):
+        f = _write_slide(tmp_path, '### Slide\n> "Do one thing and do it well."\n')
+        slide = parse_md(f).slides[1]
+        assert slide.quote == "Do one thing and do it well."
+
+    def test_attribution_extracted(self, tmp_path):
+        f = _write_slide(tmp_path, '### Slide\n> "Quote text"\n> — Leonardo da Vinci\n')
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, QuoteSlide)
+        assert slide.attribution == "Leonardo da Vinci"
+
+    def test_plain_blockquote_not_quote_slide(self, tmp_path):
+        f = _write_slide(tmp_path, "### Slide\n- bullet\n> Source: IDC 2025\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, QuoteSlide)
+
+
+# ---------------------------------------------------------------------------
+# TimelineSlide
+# ---------------------------------------------------------------------------
+
+class TestTimelineSlide:
+    def test_ordered_list_produces_timeline(self, tmp_path):
+        f = _write_slide(tmp_path, "### Roadmap\n1. Phase one\n2. Phase two\n3. Phase three\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, TimelineSlide)
+
+    def test_steps_extracted(self, tmp_path):
+        f = _write_slide(tmp_path, "### Roadmap\n1. Foundation\n2. Buildout\n3. Scale\n")
+        slide = parse_md(f).slides[1]
+        assert slide.steps == ["Foundation", "Buildout", "Scale"]
+
+    def test_single_ordered_item_not_timeline(self, tmp_path):
+        f = _write_slide(tmp_path, "### Slide\n1. Only one step\n- bullet\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, TimelineSlide)
+
+    def test_timeline_source_parsed(self, tmp_path):
+        f = _write_slide(tmp_path, "### Roadmap\n1. Step A\n2. Step B\n> Source: Project plan\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, TimelineSlide)
+        assert slide.source == "Project plan"
+
+
+# ---------------------------------------------------------------------------
+# AgendaSlide
+# ---------------------------------------------------------------------------
+
+class TestAgendaSlide:
+    def test_agenda_comment_produces_agenda_slide(self, tmp_path):
+        f = _write_slide(tmp_path, "### Agenda\n<!-- agenda -->\n1. Market\n2. Solution\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, AgendaSlide)
+
+    def test_agenda_items_extracted(self, tmp_path):
+        f = _write_slide(tmp_path, "### Agenda\n<!-- agenda -->\n1. Market\n2. Solution\n3. Ask\n")
+        slide = parse_md(f).slides[1]
+        assert slide.items == ["Market", "Solution", "Ask"]
+
+    def test_ordered_list_without_agenda_comment_not_agenda(self, tmp_path):
+        f = _write_slide(tmp_path, "### Steps\n1. Step one\n2. Step two\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, AgendaSlide)
+
+
+# ---------------------------------------------------------------------------
+# TableSlide
+# ---------------------------------------------------------------------------
+
+class TestTableSlide:
+    def _table_file(self, tmp_path):
+        return _write_slide(tmp_path, """\
+            ### Revenue by segment
+            | Segment | ARR | Growth |
+            |---|---|---|
+            | Enterprise | $1.4M | +67% |
+            | SMB | $0.5M | +23% |
+        """)
+
+    def test_markdown_table_produces_table_slide(self, tmp_path):
+        slide = parse_md(self._table_file(tmp_path)).slides[1]
+        assert isinstance(slide, TableSlide)
+
+    def test_headers_extracted(self, tmp_path):
+        slide = parse_md(self._table_file(tmp_path)).slides[1]
+        assert slide.headers == ["Segment", "ARR", "Growth"]
+
+    def test_rows_extracted(self, tmp_path):
+        slide = parse_md(self._table_file(tmp_path)).slides[1]
+        assert len(slide.rows) == 2
+        assert slide.rows[0] == ["Enterprise", "$1.4M", "+67%"]
+
+    def test_table_source_parsed(self, tmp_path):
+        f = _write_slide(tmp_path, """\
+            ### Table
+            | A | B |
+            |---|---|
+            | x | y |
+            > Source: Internal
+        """)
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, TableSlide)
+        assert slide.source == "Internal"
+
+
+# ---------------------------------------------------------------------------
+# ClosingSlide
+# ---------------------------------------------------------------------------
+
+class TestClosingSlide:
+    def test_closing_comment_produces_closing_slide(self, tmp_path):
+        f = _write_slide(tmp_path, "### Thank You\n<!-- closing -->\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, ClosingSlide)
+
+    def test_contact_extracted_from_email(self, tmp_path):
+        f = _write_slide(tmp_path, "### Thank You\n<!-- closing -->\n- hello@example.com\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, ClosingSlide)
+        assert slide.contact == "hello@example.com"
+
+    def test_website_extracted_from_url(self, tmp_path):
+        f = _write_slide(tmp_path, "### Thank You\n<!-- closing -->\n- https://example.com\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, ClosingSlide)
+        assert slide.website == "https://example.com"
+
+    def test_ordered_list_without_closing_not_closing(self, tmp_path):
+        f = _write_slide(tmp_path, "### Slide\n- bullet\n")
+        slide = parse_md(f).slides[1]
+        assert not isinstance(slide, ClosingSlide)
+
+    def test_thank_you_alias(self, tmp_path):
+        f = _write_slide(tmp_path, "### Thanks\n<!-- thank-you -->\n")
+        slide = parse_md(f).slides[1]
+        assert isinstance(slide, ClosingSlide)
 
 
 # ---------------------------------------------------------------------------

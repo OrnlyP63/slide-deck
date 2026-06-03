@@ -158,32 +158,81 @@ flowchart TD
 ## Markdown conventions
 
 ```markdown
-# Deck Title                         ← TitleSlide
-<!-- author: Name -->                ← metadata
-<!-- theme: consulting -->           ← see Themes table for all 10 options
+# Deck Title                              ← TitleSlide
+<!-- author: Name -->                     ← deck metadata
+<!-- theme: consulting -->                ← see Themes table
 
-## Section Name                      ← SectionSlide
+## Section Name                           ← SectionSlide
 
-### Slide action title               ← ContentSlide (default)
+### Slide action title                    ← ContentSlide (default)
 - bullet one
+- bullet two
 > Source: IDC 2025
 
-### SCR slide title
-**Situation:** current state...      ← SCRNarrativeSlide (all 3 required)
+### SCR narrative title
+**Situation:** current state...           ← SCRNarrativeSlide (all 3 required)
 **Complication:** the problem...
 **Resolution:** recommendation...
 
 ### Chart slide title
-![Exhibit 1: Label](description)    ← ChartPlaceholderSlide
+![Exhibit 1: Label](description)         ← ChartPlaceholderSlide
 
-### Two-column slide title           ← TwoColumnSlide (exactly 2 H4s)
+### Two-column title                      ← TwoColumnSlide (exactly 2 H4s)
 #### Left Header
 - left bullet
 #### Right Header
 - right bullet
 
-<!-- notes: presenter note -->       ← notes on any slide
+### Three key metrics
+**ARR:** $2.1M                            ← StatsSlide (≥2 non-SCR bold-key lines)
+**NRR:** 94%
+**CAC:** $38
+
+### Expert validation
+> "Simplicity is the ultimate sophistication."   ← QuoteSlide
+> — Leonardo da Vinci
+
+### Rollout plan
+1. Phase 1: Foundation                    ← TimelineSlide (ordered list ≥2 items)
+2. Phase 2: Buildout
+3. Phase 3: Scale
+
+### Today's agenda
+<!-- agenda -->                           ← AgendaSlide (comment + ordered list)
+1. Market Opportunity
+2. Our Solution
+3. The Ask
+
+### Revenue by segment
+| Segment | ARR | Growth |              ← TableSlide (markdown table)
+|---|---|---|
+| Enterprise | $1.4M | +67% |
+| SMB | $0.5M | +23% |
+
+### Thank You
+<!-- closing -->                          ← ClosingSlide
+hello@example.com
+https://github.com/OrnlyP63/slide-deck
+
+<!-- notes: presenter note here -->       ← notes field on any slide
 ```
+
+### FFT template selection — cue order (first match wins)
+
+| Priority | Cue | → Template |
+|---|---|---|
+| 1 | index 0 or `#` H1 | `TitleSlide` |
+| 2 | `##` H2 | `SectionSlide` |
+| 3 | `<!-- closing -->` | `ClosingSlide` |
+| 4 | `<!-- agenda -->` | `AgendaSlide` |
+| 5 | all 3 `**S/C/R:**` labels | `SCRNarrativeSlide` |
+| 6 | `> "quote..."` blockquote | `QuoteSlide` |
+| 7 | ≥2 `**Label:** Value` (non-SCR) | `StatsSlide` |
+| 8 | `![...]()` image | `ChartPlaceholderSlide` |
+| 9 | ordered list ≥2 items | `TimelineSlide` |
+| 10 | exactly 2× `####` H4 | `TwoColumnSlide` |
+| 11 | markdown table present | `TableSlide` |
+| 12 | default | `ContentSlide` |
 
 ---
 
@@ -243,7 +292,7 @@ uv run pytest tests/test_api.py        # api only
 uv run pytest tests/test_themes.py     # compile all 10 themes
 ```
 
-83 tests total: selector (22), parser (28), api (22), themes (11).
+Tests cover all 12 slide types, 10 themes, parser conventions, FFT priority, and API end-to-end.
 
 ---
 
