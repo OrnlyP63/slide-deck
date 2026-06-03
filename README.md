@@ -56,22 +56,18 @@ Reads a `.md` file line-by-line, maps headings to slide roles, and runs the FFT 
 flowchart TD
     A(["path to .md file"]) --> B["read lines"]
     B --> C{"heading level?"}
-    C -->|"# H1"| D["TitleSlide\n(index 0)"]
-    C -->|"## H2"| E["SectionSlide"]
-    C -->|"### H3"| F["collect body lines"]
-    C -->|"other line"| G["append to body"]
-    F --> H["flush previous slide"]
-    G --> I{{"body: bullets / SCR labels\n/ image / H4 columns"}}
-    I --> J["build ContentSignals"]
-    J --> K["DEFAULT_FFT.classify"]
-    K --> L{"template?"}
-    L -->|"is_opener"| M["TitleSlide"]
-    L -->|"has_scr"| N["SCRNarrativeSlide"]
-    L -->|"has_chart"| O["ChartPlaceholderSlide"]
-    L -->|"has_columns"| P["TwoColumnSlide"]
-    L -->|"default"| Q["ContentSlide"]
-    M & N & O & P & Q --> R["append to slides list"]
-    R --> S(["ParsedDeck"])
+    C -->|"# H1"| D["TitleSlide added directly"]
+    C -->|"## H2"| E["SectionSlide added directly"]
+    C -->|"### H3"| F["start new slide body buffer"]
+    C -->|"other"| G["append line to body buffer"]
+    F --> H["flush: classify previous body"]
+    H --> I["extract ContentSignals from body"]
+    I --> J["DEFAULT_FFT.classify(signals)"]
+    J --> K["typed Slide object created"]
+    D --> L["append to slides list"]
+    E --> L
+    K --> L
+    L --> M(["ParsedDeck"])
 ```
 
 **Output:** `ParsedDeck` — `title`, `author`, `theme`, `slides: list[Slide]` fully typed.
@@ -142,13 +138,25 @@ flowchart TD
     B -->|"yes"| C(["TitleSlide"])
     B -->|"no"| D{"is_section?"}
     D -->|"yes"| E(["SectionSlide"])
-    D -->|"no"| F{"has_scr?\nall 3 bold labels"}
-    F -->|"yes"| G(["SCRNarrativeSlide"])
-    F -->|"no"| H{"has_chart?\nimage syntax"}
-    H -->|"yes"| I(["ChartPlaceholderSlide"])
-    H -->|"no"| J{"has_columns?\nexactly 2× H4"}
-    J -->|"yes"| K(["TwoColumnSlide"])
-    J -->|"no"| L(["ContentSlide"])
+    D -->|"no"| F{"has_closing?"}
+    F -->|"yes"| G(["ClosingSlide"])
+    F -->|"no"| H{"has_agenda?"}
+    H -->|"yes"| I(["AgendaSlide"])
+    H -->|"no"| J{"has_scr?"}
+    J -->|"yes"| K(["SCRNarrativeSlide"])
+    J -->|"no"| L{"has_quote?"}
+    L -->|"yes"| M(["QuoteSlide"])
+    L -->|"no"| N{"has_stats?"}
+    N -->|"yes"| O(["StatsSlide"])
+    N -->|"no"| P{"has_chart?"}
+    P -->|"yes"| Q(["ChartPlaceholderSlide"])
+    P -->|"no"| R{"has_timeline?"}
+    R -->|"yes"| S(["TimelineSlide"])
+    R -->|"no"| T{"has_columns?"}
+    T -->|"yes"| U(["TwoColumnSlide"])
+    T -->|"no"| V{"has_table?"}
+    V -->|"yes"| W(["TableSlide"])
+    V -->|"no"| X(["ContentSlide"])
 ```
 
 **Output:** `str` — class name of the winning slide type.
