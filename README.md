@@ -27,15 +27,15 @@ flowchart TD
     C -->|"list[str] warnings"| D["build(deck)"]
     D --> E(["output/deck.pdf"])
 
-    subgraph inside parse
+    subgraph insideParse ["inside parse()"]
         P1["read lines"] --> P2["scan headings"]
         P2 --> P3["collect slide body"]
         P3 --> P4["FFT classify → typed slide"]
     end
 
-    B -.-> inside parse
+    B --> P1
 
-    subgraph inside build
+    subgraph insideBuild ["inside build()"]
         B1["get_theme"] --> B2["Renderer.render → .tex"]
         B2 --> B3["sha256 cache check"]
         B3 -->|"miss"| B4["pdflatex ×2"]
@@ -43,7 +43,7 @@ flowchart TD
         B4 --> B6(["return PDF path"])
     end
 
-    D -.-> inside build
+    D --> B1
 ```
 
 ---
