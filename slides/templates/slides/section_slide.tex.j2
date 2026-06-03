@@ -1,0 +1,8 @@
+\section{ {{- action_title | latex_escape -}} }
+\begin{frame}[c]
+\centering
+{\usebeamercolor[fg]{structure}\Large\bfseries {{ action_title | latex_escape }}}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

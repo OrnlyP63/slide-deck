@@ -1,0 +1,34 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+\begin{columns}[t]
+\begin{column}{0.48\textwidth}
+{% if left_header %}{\bfseries {{ left_header | latex_escape }}}\\[0.5em]
+{% endif %}
+{% if left_bullets %}
+\begin{itemize}
+{% for bullet in left_bullets %}
+  \item {{ bullet.text | latex_escape }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\end{column}
+\hfill
+\begin{column}{0.48\textwidth}
+{% if right_header %}{\bfseries {{ right_header | latex_escape }}}\\[0.5em]
+{% endif %}
+{% if right_bullets %}
+\begin{itemize}
+{% for bullet in right_bullets %}
+  \item {{ bullet.text | latex_escape }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\end{column}
+\end{columns}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

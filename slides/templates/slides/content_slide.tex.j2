@@ -1,0 +1,26 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+{% if bullets %}
+\begin{itemize}
+{% for bullet in bullets %}
+  \item {% if bullet.emphasis %}\textbf{ {{- bullet.text | latex_escape -}} }{% else %}{{ bullet.text | latex_escape }}{% endif %}
+{% if bullet.sub_bullets %}
+  \begin{itemize}
+{% for sub in bullet.sub_bullets %}
+    \item {{ sub | latex_escape }}
+{% endfor %}
+  \end{itemize}
+{% endif %}
+{% endfor %}
+\end{itemize}
+{% elif body_text %}
+\vspace{1em}
+{{ body_text | latex_escape }}
+{% endif %}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

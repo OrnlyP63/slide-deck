@@ -1,0 +1,24 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+\begin{center}
+\setlength{\fboxsep}{1.5em}
+\fbox{
+  \begin{minipage}{0.75\textwidth}
+  \centering
+  \vspace{1em}
+  {\large\textcolor{gray}{[Chart Placeholder]}}\\[0.75em]
+  {% if chart_label %}{\bfseries {{ chart_label | latex_escape }}}\\[0.4em]
+  {% endif %}
+  {% if chart_description %}{\small {{ chart_description | latex_escape }}}
+  {% endif %}
+  \vspace{1em}
+  \end{minipage}
+}
+\end{center}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

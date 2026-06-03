@@ -1,0 +1,24 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+\vspace{0.5em}
+\begin{columns}[t]
+\begin{column}{0.32\textwidth}
+{\bfseries\usebeamercolor[fg]{structure}Situation}\\[0.4em]
+{\small {{ situation | latex_escape }}}
+\end{column}
+\begin{column}{0.32\textwidth}
+{\bfseries\usebeamercolor[fg]{structure}Complication}\\[0.4em]
+{\small {{ complication | latex_escape }}}
+\end{column}
+\begin{column}{0.32\textwidth}
+{\bfseries\color{accent}Resolution}\\[0.4em]
+{\small {{ resolution | latex_escape }}}
+\end{column}
+\end{columns}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# LaTeX build artifacts
+output/
+*.pdf
+*.aux
+*.log
+*.toc
+*.nav
+*.snm
+*.out
+*.fls
+*.fdb_latexmk
+
+# Secrets
+.env

@@ -1,0 +1,11 @@
+\title{ {{- action_title | latex_escape -}} }
+{% if subtitle %}\subtitle{ {{- subtitle | latex_escape -}} }
+{% endif %}
+{% if author %}\author{ {{- author | latex_escape -}} }
+{% endif %}
+\begin{frame}[plain]
+\titlepage
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

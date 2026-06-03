@@ -1,0 +1,46 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+
+\definecolor{primary}{HTML}{ {{- theme.colors.primary | replace('#', '') -}} }
+\definecolor{accent}{HTML}{ {{- theme.colors.accent | replace('#', '') -}} }
+\definecolor{secondary}{HTML}{ {{- theme.colors.secondary | replace('#', '') -}} }
+
+\setbeamercolor{frametitle}{fg=primary}
+\setbeamercolor{title}{fg=white,bg=primary}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author in title page}{fg=white}
+\setbeamercolor{structure}{fg=primary}
+\setbeamercolor{normal text}{fg=secondary}
+\setbeamercolor{itemize item}{fg=accent}
+\setbeamercolor{itemize subitem}{fg=accent}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{\begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=1ex,right]{normal text}
+    {\tiny\color{gray}\insertframenumber\hspace{3mm}}
+  \end{beamercolorbox}}
+}
+
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+
+\title{ {{- deck_title | latex_escape -}} }
+\author{ {{- author | latex_escape -}} }
+\date{}
+
+\begin{document}
+
+{% for slide_content in slides_content %}
+{{ slide_content }}
+{% endfor %}
+
+\end{document}
