@@ -1,13 +1,11 @@
-# Python-generated files
+# Python
 __pycache__/
 *.py[oc]
 build/
 dist/
 wheels/
 *.egg-info
-
-# Virtual environments
-.venv
+.venv/
 
 # LaTeX build artifacts
 output/
@@ -20,6 +18,25 @@ output/
 *.out
 *.fls
 *.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ruff
+.ruff_cache/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
 
 # Secrets
 .env
+.env.*
