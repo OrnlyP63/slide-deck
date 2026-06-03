@@ -1,0 +1,15 @@
+\begin{frame}[c]
+\centering
+\vspace{1.5em}
+{\usebeamercolor[fg]{structure}\Huge\bfseries {{ action_title | latex_escape }}}
+{% if contact %}
+\vspace{2em}
+{\normalsize {{ contact | latex_escape }}}
+{% endif %}
+{% if website %}
+\\[0.4em]{\small\texttt{ {{- website | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

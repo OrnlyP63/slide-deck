@@ -50,7 +50,44 @@ class SCRNarrativeSlide(SlideBase):
     resolution: str = Field("", description="Recommended solution and next steps")
 
 
-Slide = TitleSlide | SectionSlide | ContentSlide | TwoColumnSlide | ChartPlaceholderSlide | SCRNarrativeSlide
+class Stat(BaseModel):
+    label: str = Field(..., description="Metric name, e.g. 'ARR', 'NRR'")
+    value: str = Field(..., description="Metric value, e.g. '$2.1M', '94%'")
+    subtitle: str = ""
+
+
+class StatsSlide(SlideBase):
+    stats: list[Stat] = []
+
+
+class QuoteSlide(SlideBase):
+    quote: str = Field("", description="The pull quote text, without surrounding quotation marks")
+    attribution: str = Field("", description="Author / source of the quote")
+
+
+class TimelineSlide(SlideBase):
+    steps: list[str] = Field([], description="Ordered list of step descriptions")
+
+
+class AgendaSlide(SlideBase):
+    items: list[str] = Field([], description="Ordered agenda items / section titles")
+
+
+class TableSlide(SlideBase):
+    headers: list[str] = []
+    rows: list[list[str]] = []
+
+
+class ClosingSlide(SlideBase):
+    contact: str = ""
+    website: str = ""
+
+
+Slide = (
+    TitleSlide | SectionSlide | ContentSlide | TwoColumnSlide |
+    ChartPlaceholderSlide | SCRNarrativeSlide |
+    StatsSlide | QuoteSlide | TimelineSlide | AgendaSlide | TableSlide | ClosingSlide
+)
 
 
 class ParsedDeck(BaseModel):
@@ -58,7 +95,11 @@ class ParsedDeck(BaseModel):
     title: str
     author: str = ""
     theme: str = "consulting"
-    slides: list[TitleSlide | SectionSlide | ContentSlide | TwoColumnSlide | ChartPlaceholderSlide | SCRNarrativeSlide] = []
+    slides: list[
+        TitleSlide | SectionSlide | ContentSlide | TwoColumnSlide |
+        ChartPlaceholderSlide | SCRNarrativeSlide |
+        StatsSlide | QuoteSlide | TimelineSlide | AgendaSlide | TableSlide | ClosingSlide
+    ] = []
 
 
 def validate_parsed(deck: ParsedDeck) -> list[str]:

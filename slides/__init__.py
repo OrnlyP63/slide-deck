@@ -1,12 +1,19 @@
 from slides.api import build, build_from_md, parse, validate
 from slides.model import (
+    AgendaSlide,
     BulletPoint,
     ChartPlaceholderSlide,
+    ClosingSlide,
     ContentSlide,
     ParsedDeck,
+    QuoteSlide,
     SCRNarrativeSlide,
     SectionSlide,
     SlideBase,
+    Stat,
+    StatsSlide,
+    TableSlide,
+    TimelineSlide,
     TitleSlide,
     TwoColumnSlide,
     validate_parsed,
@@ -18,9 +25,11 @@ __all__ = [
     # API
     "parse", "validate", "build", "build_from_md",
     # Models
-    "ParsedDeck", "BulletPoint", "SlideBase",
+    "ParsedDeck", "BulletPoint", "Stat", "SlideBase",
     "TitleSlide", "SectionSlide", "ContentSlide",
     "TwoColumnSlide", "ChartPlaceholderSlide", "SCRNarrativeSlide",
+    "StatsSlide", "QuoteSlide", "TimelineSlide",
+    "AgendaSlide", "TableSlide", "ClosingSlide",
     "validate_parsed",
     # Selector
     "ContentSignals", "DEFAULT_FFT", "FFTNode", "FFTSelector",

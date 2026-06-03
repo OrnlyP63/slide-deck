@@ -1,0 +1,21 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+\vspace{1.2em}
+\begin{columns}[c]
+{% set w = (0.96 / stats|length) | round(2) %}
+{% for stat in stats %}
+\begin{column}{ {{- w -}} \textwidth}
+\centering
+{\usebeamercolor[fg]{structure}\fontsize{34}{38}\selectfont\bfseries {{ stat.value | latex_escape }}}\\[0.35em]
+{\small\bfseries {{ stat.label | latex_escape }}}
+{% if stat.subtitle %}\\[0.15em]{\scriptsize\color{gray} {{ stat.subtitle | latex_escape }}}{% endif %}
+\end{column}
+{% endfor %}
+\end{columns}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

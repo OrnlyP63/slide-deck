@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+{% if headers %}
+\vspace{0.5em}
+\begin{center}
+\begin{tabular}{ {% for h in headers %}l {% endfor %} }
+\toprule
+{% for h in headers %}{\bfseries {{ h | latex_escape }}}{% if not loop.last %} & {% endif %}{% endfor %} \\
+\midrule
+{% for row in rows %}
+{% for cell in row %}{{ cell | latex_escape }}{% if not loop.last %} & {% endif %}{% endfor %} \\
+{% endfor %}
+\bottomrule
+\end{tabular}
+\end{center}
+{% endif %}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

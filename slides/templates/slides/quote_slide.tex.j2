@@ -1,0 +1,17 @@
+\begin{frame}[c]
+\frametitle{ {{- action_title | latex_escape -}} }
+\begin{center}
+\vspace{1em}
+{\Large\itshape ``{{ quote | latex_escape }}''}
+{% if attribution %}
+\\[1.2em]
+{\normalsize\bfseries\usebeamercolor[fg]{structure} --- {{ attribution | latex_escape }}}
+{% endif %}
+\end{center}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}

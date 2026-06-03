@@ -5,12 +5,21 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class ContentSignals:
-    """All signals needed for FFT traversal. Structural signals set by code; content signals from LLM Call 1."""
+    """All signals needed for FFT traversal.
+    Structural signals set by code; content signals from body parsing."""
     is_opener: bool = False
     is_section: bool = False
+    # Explicit marker signals (HTML comments)
+    has_closing: bool = False
+    has_agenda: bool = False
+    # Content-derived signals
     has_scr: bool = False
+    has_quote: bool = False
+    has_stats: bool = False
     has_chart: bool = False
+    has_timeline: bool = False
     has_columns: bool = False
+    has_table: bool = False
     has_bullets: bool = True
 
 
@@ -51,10 +60,20 @@ class FFTSelector:
 
 
 DEFAULT_FFT = FFTSelector([
-    FFTNode("is_opener",   true_exit="TitleSlide"),
-    FFTNode("is_section",  true_exit="SectionSlide"),
-    FFTNode("has_scr",     true_exit="SCRNarrativeSlide"),
-    FFTNode("has_chart",   true_exit="ChartPlaceholderSlide"),
-    FFTNode("has_columns", true_exit="TwoColumnSlide"),
-    FFTNode("has_bullets", true_exit="ContentSlide", false_exit="ContentSlide"),
+    # Structural — derived from heading level / index
+    FFTNode("is_opener",    true_exit="TitleSlide"),
+    FFTNode("is_section",   true_exit="SectionSlide"),
+    # Explicit HTML comment markers — unambiguous
+    FFTNode("has_closing",  true_exit="ClosingSlide"),
+    FFTNode("has_agenda",   true_exit="AgendaSlide"),
+    # Content-derived — most distinctive first
+    FFTNode("has_scr",      true_exit="SCRNarrativeSlide"),
+    FFTNode("has_quote",    true_exit="QuoteSlide"),
+    FFTNode("has_stats",    true_exit="StatsSlide"),
+    FFTNode("has_chart",    true_exit="ChartPlaceholderSlide"),
+    FFTNode("has_timeline", true_exit="TimelineSlide"),
+    FFTNode("has_columns",  true_exit="TwoColumnSlide"),
+    FFTNode("has_table",    true_exit="TableSlide"),
+    # Fallback — both exits required (last node invariant)
+    FFTNode("has_bullets",  true_exit="ContentSlide", false_exit="ContentSlide"),
 ])

@@ -1,0 +1,14 @@
+\begin{frame}
+\frametitle{ {{- action_title | latex_escape -}} }
+\begin{enumerate}
+{% for step in steps %}
+  \item {{ step | latex_escape }}
+{% endfor %}
+\end{enumerate}
+{% if source %}
+\vfill{\tiny\textcolor{gray}{ {{- source | latex_escape -}} }}
+{% endif %}
+{% if notes %}
+\note{ {{- notes | latex_escape -}} }
+{% endif %}
+\end{frame}
