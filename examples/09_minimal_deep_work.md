@@ -2,6 +2,13 @@
 <!-- author: Cal Newport Research Synthesis -->
 <!-- theme: minimal -->
 
+### Today's agenda
+<!-- agenda -->
+1. The shallow work problem
+2. Why willpower fails
+3. The deep work protocol
+4. 30-day implementation plan
+
 ## 1. The Problem with Shallow Work
 
 ### Knowledge workers spend 41% of their time on shallow tasks that produce near-zero value
@@ -10,6 +17,14 @@
 **Resolution:** Structured deep work protocol — time-blocking, environment design, and digital minimalism — recovers 3–4 hours of high-intensity focus per day and correlates with 2.4× faster career advancement
 > Source: Newport 2016 Deep Work; Gloria Mark UC Irvine interruption research; Microsoft Productivity Research 2024
 
+### The cost of distraction: three numbers every knowledge worker should know
+**Daily interruptions per person:** 96
+**Recovery time per interruption:** 23 min
+**Shallow work share of day:** 41%
+> Source: Gloria Mark UC Irvine; McKinsey Global Institute; RescueTime 2024
+
+## 2. Why Willpower Alone Fails
+
 ### Distraction economy is engineered to fragment attention — passive resistance fails
 - Social media platforms optimise for 40-second average session; 220 sessions per day typical
 - Open-plan offices generate 6 auditory interruptions per hour — highest predictor of low output
@@ -17,14 +32,11 @@
 - Willpower alone cannot overcome systems designed by teams of engagement engineers
 > Source: Alter 2017 Irresistible; Newport 2019 Digital Minimalism; Stanford Social Media Lab
 
-## 2. Deep Work Protocol
+### The most valuable skill in the 21st century is increasingly rare
+> "The ability to perform deep work is becoming increasingly rare at exactly the same time it is becoming increasingly valuable in our economy."
+> — Cal Newport, Deep Work (2016)
 
-### Time-blocking converts abstract intentions into defended calendar commitments
-- Schedule deep work blocks before shallow tasks each morning — cognitive peak is morning for 74% of people
-- Minimum viable deep work block: 90 minutes (enters flow state after ~20 minutes)
-- Treat deep work blocks as external meetings — decline conflicts, communicate unavailability
-- Weekly review identifies which shallow obligations can be eliminated, delegated, or batched
-> Source: Newport 2016; Csikszentmihalyi flow state research; Circadian productivity studies
+## 3. The Deep Work Protocol
 
 ### Four environment interventions reduce friction to entering deep work
 #### Remove Distractions
@@ -36,19 +48,26 @@
 - Consistent start ritual: same music, coffee, position creates conditioned focus response
 - Shutdown ritual completes the workday — prevents evening rumination
 
-## 3. Implementation and Evidence
+### Deep work practitioners outperform peers on every career metric
+| Outcome | Deep work practitioners | Control group |
+|---|---|---|
+| Skill development speed | 2.4× faster | Baseline |
+| Hours worked (same output) | -34% | Baseline |
+| Burnout score | 28% lower | Baseline |
+| 5-year career advancement | 2.1× higher | Baseline |
+> Source: Newport case studies; Microsoft Viva productivity data 2024; Deliberate practice literature
 
-### Professionals who adopt deep work protocol report 2.4× faster skill development
-- 2.4× faster progress on complex skills requiring deliberate practice
-- 34% reduction in total working hours with equivalent or greater output
-- Burnout scores decline 28% — counterintuitive result explained by restored sense of agency
-- Career advancement rate 2.1× higher over 5-year cohort study
-> Source: Deliberate practice research (Ericsson); Newport case studies; Microsoft Viva productivity data 2024
+## 4. Implementation
 
-### Start with 30 days: one 90-minute block daily, phone in drawer, one app blocked
-- Week 1: Identify your cognitive peak hour and protect it daily
-- Week 2: Add environment intervention — phone out of reach during the block
-- Week 3: Add shutdown ritual — complete stop at fixed time, capture all open loops
-- Week 4: Evaluate output quality and extend block to 120 minutes if sustainable
-> Source: Newport habit formation protocol; James Clear Atomic Habits implementation framework
-<!-- notes: Audience are knowledge workers under pressure — acknowledge the structural constraints before prescribing individual solutions -->
+### Start with 30 days: one block daily, build from there
+1. Week 1: Identify your cognitive peak hour and protect it daily — no meetings
+2. Week 2: Phone out of reach during the block; one website blocker rule
+3. Week 3: Add shutdown ritual — complete stop at fixed time, capture all open loops
+4. Week 4: Extend block to 120 minutes; measure output quality vs baseline
+> Source: Newport habit formation protocol; James Clear Atomic Habits framework
+
+### Start your deep work practice today
+<!-- closing -->
+- hello@deepwork.io
+- https://calnewport.com/deep-work
+<!-- notes: Audience are knowledge workers under pressure — acknowledge structural constraints before prescribing individual solutions -->

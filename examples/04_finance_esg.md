@@ -2,6 +2,13 @@
 <!-- author: Investment Strategy Group -->
 <!-- theme: finance -->
 
+### Presentation agenda
+<!-- agenda -->
+1. Market context and opportunity
+2. Our proprietary methodology
+3. Track record and portfolio construction
+4. Fund terms and next steps
+
 ## 1. Market Context
 
 ### ESG-integrated EM portfolios outperformed benchmarks by 340bps annually 2018–2024
@@ -33,14 +40,26 @@
 - EM-specific materiality weighting by sector
 <!-- notes: Compliance team has reviewed the alternative data sourcing — all within regulatory bounds, documentation in appendix -->
 
-## 3. Portfolio Construction and Returns
+## 3. Track Record
 
-### ESG-integrated portfolio delivered 18.4% CAGR vs 11.2% MSCI EM 2018–2024
-- Gross return: 18.4% CAGR vs 11.2% MSCI EM (net: 15.9% after 1.5% management fee)
-- Sharpe ratio: 1.42 vs 0.62 MSCI EM benchmark
-- Maximum drawdown: -18.3% vs -31.7% benchmark (2022 EM selloff)
-- Carbon intensity: 67% below benchmark with no sector exclusions
+### Six-year track record in three numbers
+**CAGR:** 18.4%
+**Sharpe ratio:** 1.42
+**Max drawdown:** -18.3%
 > Source: Internal performance attribution; GIPS-compliant composite 2018–2024; KPMG verified
+
+### Portfolio outperforms across all risk-adjusted metrics vs MSCI EM benchmark
+| Metric | Our Strategy | MSCI EM | Improvement |
+|---|---|---|---|
+| CAGR (gross) | 18.4% | 11.2% | +7.2pp |
+| Sharpe ratio | 1.42 | 0.62 | 2.3× |
+| Max drawdown | -18.3% | -31.7% | +13.4pp |
+| Carbon intensity | 33% of index | Benchmark | -67% |
+> Source: Bloomberg; Internal attribution; GIPS composite 2018–2024
+
+### Alpha generation is durable — and the regulatory tailwind is only accelerating
+> "ESG is no longer a values question. It is a valuation question."
+> — Larry Fink, BlackRock Annual Letter 2024
 
 ### Fund terms and target allocation for institutional investors
 - Strategy AUM: $2.1B; targeting $5B by 2027
@@ -48,3 +67,8 @@
 - Minimum commitment: $25M; quarterly liquidity with 90-day notice
 - Target allocation: 60% equity, 30% EM corporate bonds, 10% green infrastructure
 > Source: Fund prospectus; Subscription documents available under NDA
+
+### Contact us to review subscription documents
+<!-- closing -->
+- investor.relations@esgfund.com
+- https://esgfund.com/institutional

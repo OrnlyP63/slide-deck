@@ -2,6 +2,13 @@
 <!-- author: Health Systems Research Institute -->
 <!-- theme: healthcare -->
 
+### Presentation outline
+<!-- agenda -->
+1. The rural health access crisis
+2. Study design and findings
+3. Policy recommendations
+4. Implementation roadmap
+
 ## 1. Clinical and Access Context
 
 ### Rural Americans die 3.4 years younger than urban peers — access gap is primary driver
@@ -19,6 +26,12 @@
 
 ## 2. Study Findings
 
+### Three numbers summarise five years of cohort evidence
+**Preventable hospitalisations reduced:** 35%
+**Per-patient annual savings:** $4,200
+**Mental health access increase:** 3.8×
+> Source: CMS claims data; State health records; Our analysis. IRB approved. n=284,000
+
 ### 47-county cohort shows 35% reduction in preventable hospitalisation with telemedicine access
 ![Figure 2: Hospitalisation Rates Pre/Post Telemedicine Parity](Line chart: 47 intervention counties vs 47 matched control counties; 2019–2024; intervention counties show 35% decline in preventable hospitalisation rate from 2021; control counties flat; 95% CI shown)
 > Source: CMS claims data; State health department records; Our analysis. IRB approved.
@@ -35,17 +48,27 @@
 
 ## 3. Policy Recommendations
 
-### Four policy changes would extend telemedicine benefits to all 46 million rural Americans
-- Permanent reimbursement parity: Medicare and Medicaid telemedicine reimbursement at 100% of in-person rate in all 50 states (currently 19 states at full parity)
-- Broadband infrastructure: $12B rural broadband investment closes digital access gap by 2028
-- Licensure compact expansion: Interstate telemedicine licensure compact from 38 to all 50 states eliminates cross-state practice barrier
-- Device provision: Federal programme providing tablets and connectivity to Medicare patients over 65 with no broadband — $340M cost, $2.1B projected hospitalisation savings
-> Source: NCSL Telemedicine Policy Tracker; FCC Broadband Gap Analysis; Our economic modelling
+### Access to healthcare should not depend on zip code
+> "Of all the forms of inequality, injustice in health care is the most shocking and inhumane."
+> — Martin Luther King Jr., 1966
 
-### Reimbursement parity investment of $2.3B annually generates $11.4B in system savings
-- $2.3B annual federal reimbursement cost increase for full telemedicine parity
-- $11.4B avoided cost: $6.2B preventable hospitalisation, $3.1B ED visits, $2.1B long-term care
-- Net annual saving: $9.1B; full payback within 3 months of implementation
-- 34,000 preventable deaths annually avoidable at full telemedicine penetration
-> Source: Our economic model; CBO scoring methodology; Published telemedicine cost-effectiveness literature
+### Four interventions close the rural health gap — costs negligible vs benefits
+| Intervention | Federal Cost/yr | Projected Saving/yr | Net |
+|---|---|---|---|
+| Reimbursement parity | $2.3B | $11.4B | +$9.1B |
+| Rural broadband | $1.5B (one-time) | $2.1B | +$0.6B |
+| Licensure compact | $45M | $780M | +$735M |
+| Device programme | $340M | $2.1B | +$1.76B |
+> Source: Our economic model; CBO scoring methodology; Published telemedicine literature
+
+### Policy implementation: three steps in 18 months
+1. Months 1–6: Congress passes permanent reimbursement parity; CMS issues guidance
+2. Months 7–12: FCC rural broadband deployment accelerated; interstate licensure compact expanded
+3. Months 13–18: Federal device programme launches; 30M rural patients covered
+> Source: Legislative timeline; CMS implementation capacity assessment
+
+### Contact the research team for full data
+<!-- closing -->
+- research@healthsystems.edu
+- https://healthsystems.edu/telemedicine-study
 <!-- notes: CMS representative on panel — they know the reimbursement data well, go straight to the policy ask -->

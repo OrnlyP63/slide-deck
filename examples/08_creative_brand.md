@@ -2,6 +2,13 @@
 <!-- author: Brand Strategy Studio -->
 <!-- theme: creative -->
 
+### Today's agenda
+<!-- agenda -->
+1. Brand diagnosis: where we are
+2. New territory: circular fashion leadership
+3. Three-pillar strategy
+4. Commercial case and timeline
+
 ## 1. Brand Diagnosis
 
 ### Heritage positioning built on price no longer resonates — brand relevance fell 34 points in 3 years
@@ -18,6 +25,10 @@
 > Source: Edelman Trust Barometer 2025; First Insight Gen Z Report; Internal brand research
 
 ## 2. New Brand Territory
+
+### The future of fashion is circular — and the territory is wide open
+> "Fashion is not something that exists in dresses only. Fashion is in the sky, in the street; fashion has to do with ideas, the way we live, what is happening."
+> — Coco Chanel
 
 ### Circular fashion leadership is unowned, values-aligned, and commercially proven
 ![Brand Territory Map](Perceptual map: x-axis = price (budget to premium), y-axis = brand values (functional to purposeful); competitors plotted; circular fashion territory shown as unoccupied white space in purposeful/accessible quadrant)
@@ -38,17 +49,21 @@
 
 ## 3. Commercial Case
 
-### Repositioned brand delivers $680M incremental revenue by Year 3
-- Resale marketplace: $180M revenue (Year 3), 67% gross margin vs 34% new goods
-- Rental subscription: 340,000 subscribers × $39/month = $159M ARR Year 3
-- New-goods premium pricing: +12% ASP uplift on repositioned core range = $341M
-- Total Year 3 incremental: $680M on investment base of $145M (4.7× return)
-> Source: Financial model based on ThredUp, Nuuly, and Patagonia public data; Internal demand research
+### Three revenue streams deliver $680M incremental by Year 3
+**Resale marketplace (Y3):** $180M
+**Rental subscription (Y3):** $159M ARR
+**Premium pricing uplift:** $341M
+> Source: Financial model based on ThredUp, Nuuly, Patagonia public data; Internal demand research
 
-### 18-month implementation: soft launch Q2, full rollout Q4 2026
-- Q1 2026: Resale platform build, repair hub pilot in 20 stores, brand campaign brief
-- Q2 2026: Resale marketplace live, brand relaunch campaign — target 15-point awareness shift
-- Q3 2026: Rental subscription pilot in 12 cities, repair programme national rollout
-- Q4 2026: Full national integration; rental national rollout; first annual impact report
+### 18-month implementation from brand audit to national circular launch
+1. Q1 2026: Resale platform build, repair hub pilot in 20 stores, brand campaign brief
+2. Q2 2026: Resale marketplace live, brand relaunch campaign targeting 15-point awareness shift
+3. Q3 2026: Rental subscription pilot in 12 cities, repair programme national rollout
+4. Q4 2026: Full national integration; first annual impact report published
 > Source: Project timeline; Agency and platform vendor SOW
+
+### Let's build the brand that Gen Z actually chooses
+<!-- closing -->
+- strategy@brandstudio.com
+- https://brandstudio.com
 <!-- notes: CMO has concerns about alienating existing 35-54 base — frame as brand extension not replacement, show overlap data -->

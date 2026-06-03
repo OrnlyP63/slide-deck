@@ -2,6 +2,13 @@
 <!-- author: Digital Policy Directorate -->
 <!-- theme: government -->
 
+### Briefing agenda
+<!-- agenda -->
+1. Policy context and threat landscape
+2. Proposed risk-tiered framework
+3. Implementation timeline
+4. Budget and resourcing
+
 ## 1. Policy Context
 
 ### Uncoordinated AI deployment creates both economic risk and public safety exposure
@@ -22,30 +29,37 @@
 ![Figure 1: Risk Tier Matrix](2×2 matrix: x-axis = deployment scale (individual to societal), y-axis = decision reversibility (easily reversible to life-altering); four quadrants: Tier 1 prohibited, Tier 2 high-risk mandatory audit, Tier 3 transparency disclosure, Tier 4 light-touch self-certification)
 > Source: Policy working group analysis; EU AI Act mapping; NIST AI RMF alignment
 
-### Framework assigns clear obligations without creating compliance barriers for Tiers 3 and 4
-#### Tier 1–2: High Risk (Mandatory Compliance)
-- Independent algorithmic audit before deployment
-- Continuous monitoring and annual re-audit
-- Human-in-the-loop requirement for consequential decisions
-- Public register entry and bias impact assessment
-#### Tier 3–4: Low Risk (Self-Certification)
-- One-time self-assessment against published checklist
-- Incident reporting if harm threshold triggered
-- No pre-deployment approval required
+### Compliance obligations scaled to risk tier — innovation protected at tiers 3 and 4
+| Tier | Risk Level | Compliance | Approx. Systems |
+|---|---|---|---|
+| Tier 1 | Prohibited | Banned | ~12 use cases |
+| Tier 2 | High risk | Mandatory audit + register | ~340 systems |
+| Tier 3 | Medium risk | Transparency disclosure | ~1,200 systems |
+| Tier 4 | Low risk | Self-certification | ~5,000+ systems |
+> Source: Policy working group; Federal AI inventory Q3 2025
 
-## 3. Implementation Plan
+### Effective AI governance requires both capability and restraint
+> "With great power comes great responsibility."
+> — Attributed to Voltaire; popularised in public discourse
 
-### Phased rollout over 24 months minimises disruption while achieving full coverage
-- Months 1–6: Establish AI Governance Office; publish Tier classification guidance; begin federal agency inventory
-- Months 7–12: Mandatory registration for all Tier 1–2 systems; audit standards published
-- Months 13–18: First wave of mandatory audits complete; public register live
-- Months 19–24: Full enforcement; Tier 3–4 self-certification system operational
-> Source: Policy implementation timeline; Resource estimate based on EU AI Act staffing benchmarks
+## 3. Implementation
 
-### Framework requires 340 FTE and $180M over 5 years — recoverable through compliance fees
-- 340 FTE across AI Governance Office, sector regulators, and enforcement teams
-- $180M five-year cost; $95M recoverable via audit fees and compliance levies on Tier 1–2 operators
-- Net public cost: $85M over 5 years against estimated $4.2B in avoided harms (GAO model)
-- International alignment reduces compliance cost for exporters by estimated $2.1B annually
-> Source: OMB budget analysis; GAO cost-benefit model; International regulatory alignment study
+### 24-month phased rollout achieves full enforcement without disrupting government operations
+1. Months 1–6: Establish AI Governance Office; publish Tier classification guidance
+2. Months 7–12: Mandatory registration for Tier 1–2 systems; audit standards published
+3. Months 13–18: First audit wave complete; public register live
+4. Months 19–24: Full enforcement; Tier 3–4 self-certification portal operational
+> Source: Policy implementation timeline; EU AI Act staffing benchmarks
+
+### Framework requires $180M over 5 years — net cost $85M after compliance fee recovery
+**Gross cost (5yr):** $180M
+**Fee recovery:** $95M
+**Net public cost:** $85M
+**Avoided harms:** $4.2B
+> Source: OMB budget analysis; GAO cost-benefit model
+
+### Directorate contacts for committee follow-up
+<!-- closing -->
+- ai-governance@digital.gov
+- https://digital.gov/ai-framework
 <!-- notes: Committee members from tech-heavy districts will push back on Tier 2 burdens — have the SME sector carve-out ready -->

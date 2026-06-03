@@ -2,6 +2,13 @@
 <!-- author: Dr. Research Team, Environmental Sciences -->
 <!-- theme: academic -->
 
+### Presentation outline
+<!-- agenda -->
+1. Background and research questions
+2. Field study methodology
+3. Key findings
+4. Policy implications
+
 ## 1. Background and Research Questions
 
 ### Microplastic contamination has reached every freshwater ecosystem studied since 2015
@@ -19,6 +26,12 @@
 
 ## 2. Findings
 
+### Ten years of data: three headline numbers define the crisis
+**Sites contaminated:** 847 of 847
+**Concentration increase:** 4.7× since 2015
+**Biodiversity effect threshold:** 1,500 particles/L
+> Source: Primary field data 2015–2024; DOI pending
+
 ### Concentration data across 847 sites reveals three distinct contamination regimes
 ![Figure 1: Spatial Distribution of Microplastic Concentration](Map of 847 monitoring sites with concentration heat overlay; three clusters: urban-industrial (high), agricultural (medium), protected watershed (low); temporal trend lines 2015–2024 per cluster)
 > Source: Primary field data, n=847 sites, 2015–2024. DOI pending.
@@ -33,19 +46,25 @@
 ## 3. Policy Implications
 
 ### Current regulatory thresholds are 40× too permissive based on dose-response evidence
-#### What Regulations Allow
-- OECD freshwater guideline: 60,000 particles/L
-- EU Water Framework Directive: no microplastic standard
-- US EPA: monitoring only, no limit established
-#### What Evidence Suggests
-- Biodiversity effects begin at 1,500 particles/L
-- Sensitive species threshold: 200 particles/L
-- Precautionary limit recommendation: 500 particles/L
+| Jurisdiction | Current limit | Evidence-based limit | Gap |
+|---|---|---|---|
+| OECD guideline | 60,000 particles/L | 500 particles/L | 120× |
+| EU Water Framework | None | 500 particles/L | No standard |
+| US EPA | Monitoring only | 500 particles/L | No limit |
+> Source: Our dose-response modelling; Regulatory database review
+
+### Science demands a fundamental rethink of freshwater plastic governance
+> "We do not inherit the Earth from our ancestors; we borrow it from our children."
+> — Antoine de Saint-Exupery
 
 ### Three regulatory interventions would reduce freshwater microplastic load by 68%
-- Mandatory tertiary treatment at wastewater plants serving >50,000 population: 41% reduction
-- Extended producer responsibility for single-use plastics with freshwater proximity weighting: 18% reduction
-- Agricultural microplastic-free fertiliser standards by 2028: 9% reduction
-- Combined intervention reduces average monitored concentration below proposed 500 particles/L threshold
+1. Mandatory tertiary treatment at wastewater plants serving >50,000 population: 41% reduction
+2. Extended producer responsibility for single-use plastics with freshwater proximity weighting: 18% reduction
+3. Agricultural microplastic-free fertiliser standards by 2028: 9% reduction
 > Source: Our modelling using field data and treatment efficacy literature; Cost-benefit analysis in supplementary materials
+
+### Thank You — Data and code available at osf.io/microplastics2024
+<!-- closing -->
+- research@env-sciences.edu
+- https://osf.io/microplastics2024
 <!-- notes: Journal reviewers have questioned agricultural pathway data — acknowledge uncertainty, point to supplementary robustness checks -->

@@ -2,6 +2,13 @@
 <!-- author: Strategy Practice -->
 <!-- theme: consulting -->
 
+### Today's agenda
+<!-- agenda -->
+1. Situation: The concentration risk problem
+2. Complication: Quantifying exposure
+3. Resolution: Dual-source strategy
+4. Investment case
+
 ## 1. Situation
 
 ### Global supply chains face unprecedented concentration risk after 2020–2024 disruptions
@@ -18,6 +25,12 @@
 > Source: Resilinc Supply Chain Risk Report 2024; Deloitte Manufacturing Survey
 
 ## 2. Complication
+
+### Three disruption metrics define the scale of current exposure
+**Revenue at risk:** $2.1B/year
+**Single-source inputs:** 14 of 18 critical
+**Avg. qualification lead time:** 67 days
+> Source: Internal procurement data; Company risk assessment Q4 2025
 
 ### Current exposure creates $2.1B annualised risk for the business
 ![Exhibit 1: Concentration Risk Heatmap](Heatmap showing 14 critical inputs with single-source concentration in 3 geographies — semiconductors, rare earths, and specialty chemicals highlighted red)
@@ -43,19 +56,22 @@
 > Source: Bain Supply Chain Resilience Benchmark 2024; Internal financial model
 
 ### Implementation roadmap delivers quick wins in 90 days and full resilience in 18 months
-#### Phase 1 (Q1 2026): Quick wins
-- Qualify alternates for top 3 highest-risk inputs
-- Deploy supply chain visibility dashboard
-- Establish 30-day buffer for semiconductors
-#### Phase 2 (Q2–Q4 2026): Core buildout
-- Complete dual-source qualification for all 14 inputs
-- Regional buffer warehousing operational
-- Supplier contracts with resilience SLAs signed
+1. Q1 2026: Qualify alternates for top 3 inputs; deploy visibility dashboard
+2. Q2–Q3 2026: Complete dual-source qualification for all 14 inputs; buffer warehousing
+3. Q4 2026: Regional buffers operational; resilience SLAs signed with all tier-1 suppliers
+> Source: Internal project plan; Procurement team sign-off Q4 2025
 
 ### Investment of $47M delivers $210M NPV over five years at 12% discount rate
-- $47M capital: inventory buffer ($31M), qualification costs ($12M), technology ($4M)
-- $210M NPV from avoided disruption costs, insurance savings, customer retention premium
-- Break-even at month 18 assuming one avoided disruption event per 24 months
-- Base case assumes 2.3 disruption events per year at $85M average impact
+| Item | Investment | Value Created |
+|---|---|---|
+| Inventory buffer | $31M | $130M NPV (avoided disruptions) |
+| Supplier qualification | $12M | $55M NPV (retained revenue) |
+| Technology platform | $4M | $25M NPV (insurance savings) |
+| **Total** | **$47M** | **$210M NPV** |
 > Source: Company financial model v3; Historical disruption cost analysis 2020–2025
+
+### Thank You — Questions?
+<!-- closing -->
+- strategy@company.com
+- https://github.com/OrnlyP63/slide-deck
 <!-- notes: CFO will focus on the 8% cost premium — anchor to NPV and break-even early -->

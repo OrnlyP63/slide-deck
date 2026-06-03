@@ -2,6 +2,13 @@
 <!-- author: Platform Engineering -->
 <!-- theme: dark -->
 
+### Today's agenda
+<!-- agenda -->
+1. The developer experience problem
+2. The Backstage-based portal solution
+3. ROI and adoption strategy
+4. Implementation timeline
+
 ## 1. The Developer Experience Problem
 
 ### Engineers spend 4.5 hours per day navigating fragmented tooling instead of writing code
@@ -19,33 +26,48 @@
 
 ## 2. The Portal Solution
 
+### The productivity tax is real — and fixable
+**Time wasted daily per engineer:** 4.5 hrs
+**Onboarding time (current):** 3.4 weeks
+**Incidents from unknown deps/month:** 3.1
+> Source: Internal engineering survey Q4 2025
+
 ### Backstage-based IDP with four core plugins addresses all four friction points
 ![Portal Architecture](Four modules: Service Catalog (discovery) → Software Templates (scaffolding) → TechDocs (living documentation) → Dependency Graph (visibility); unified auth layer; integrates with GitHub, PagerDuty, Datadog, Jira)
 > Source: Backstage.io architecture; Internal integration design doc v3
 
-### Phased rollout prioritises highest-friction use cases first
-#### Phase 1: Service Catalog (Month 1–2)
-- Import all 847 services with owner, SLA, runbook, and on-call links
-- GitHub integration syncs ownership automatically
-- Reduces service discovery time from 47min to <5min per day
-#### Phase 2: Golden Path Templates (Month 3–4)
-- 12 opinionated project templates: API, worker, ML service, frontend
-- New service scaffold: 4 hours vs 2.3 days — 92% reduction
-- Embedded compliance, security scanning, and observability baked in
+### Portal capabilities map directly onto the four friction points
+| Friction Point | Time Lost/Day | Portal Solution | Time After |
+|---|---|---|---|
+| Service discovery | 47 min | Service catalog + search | <5 min |
+| Environment setup | 2.3 days/service | Golden path templates | 4 hours |
+| Documentation drift | 38 min | Auto-synced TechDocs | 8 min |
+| Dependency mapping | 34 min | Live dependency graph | 5 min |
+> Source: Backstage case studies (Spotify, Zalando); Internal estimates
 
-## 3. ROI and Adoption Plan
+## 3. ROI
 
-### Portal investment of $420K recovers $8.4M annually in engineering productivity
-- 2.1 hours/day × 340 engineers × 250 days × $120/hour fully loaded = $8.4M annual value recovered
-- Onboarding improvement: 3.4 weeks → 3 days × 80 new hires/year × $3,400 cost/week = $1.2M additional saving
-- Incident reduction: 31% fewer undocumented dependency incidents × $85K average incident cost = $790K
-- Total annual benefit: $10.4M; investment $420K build + $180K annual maintenance
-> Source: Internal headcount and salary data; Incident cost model; Spotify Backstage ROI case study
+### Platform investment of $420K recovers $10.4M annually
+**Engineering time recovered:** $8.4M/yr
+**Onboarding improvement:** $1.2M/yr
+**Incident reduction:** $790K/yr
+> Source: Internal headcount data; Spotify Backstage ROI case study
 
-### Adoption strategy: seed with 3 champion teams before mandating org-wide
-- Month 1: 3 volunteer champion teams dogfood the portal; fix top 10 friction points
-- Month 2: Soft launch to all teams; golden path templates for highest-volume service types
-- Month 3: Leadership mandate — all new services must use IDP templates
-- Month 6: Legacy service migration complete; 100% catalog coverage
-> Source: Adoption playbook; Change management framework; Spotify and Zalando rollout retrospectives
+### Speed and quality improve together — not a trade-off
+> "You can have speed, quality, and reliability. The constraint is not the technology. It is the platform."
+> — Nicole Forsgren, Accelerate (2018)
+
+## 4. Implementation
+
+### Three-phase adoption: seed champions, soft launch, mandate
+1. Month 1: 3 volunteer champion teams dogfood portal; fix top 10 friction points
+2. Month 2: Soft launch to all 28 teams; golden path templates for high-volume service types
+3. Month 3: Leadership mandate — all new services use IDP templates; 100% catalog target
+4. Month 6: Legacy service migration complete; full dependency graph coverage
+> Source: Adoption playbook; Spotify and Zalando rollout retrospectives
+
+### Platform Engineering — let's ship better, faster, together
+<!-- closing -->
+- platform@company.com
+- https://github.com/OrnlyP63/slide-deck
 <!-- notes: Some senior engineers will resist "golden paths" as limiting — frame as defaults not mandates, show escape hatches -->

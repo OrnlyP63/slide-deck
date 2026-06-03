@@ -2,6 +2,13 @@
 <!-- author: SkillBridge Team -->
 <!-- theme: startup -->
 
+### Today's agenda
+<!-- agenda -->
+1. The problem: 87M workers, no affordable reskilling
+2. Our solution: AI simulation + employer validation
+3. Traction: $1.8M ARR, 12,400 learners
+4. The ask: $8M Series A
+
 ## 1. The Problem
 
 ### 87 million workers face displacement by 2030 with no affordable reskilling path
@@ -11,11 +18,13 @@
 > Source: WEF Future of Jobs Report 2025; OECD Skills Outlook 2024; Company research
 
 ### Existing solutions fail displaced workers on cost, speed, and employer recognition
-- Community colleges: 18-month programmes, 34% completion rate, low employer trust
-- Online platforms (Coursera, Udemy): theory-heavy, no hands-on simulation, 8% completion
-- Bootcamps: $15K average cost, accessible to <5% of blue-collar workers
-- Employer training: reactive, not portable, covers only current employer's needs
-> Source: Burning Glass Institute 2024; National Skills Coalition
+| Solution | Cost | Duration | Completion Rate |
+|---|---|---|---|
+| SkillBridge | $400 | 8 weeks | 91% |
+| Community college | $6,500 | 18 months | 34% |
+| Bootcamp | $15,000 | 12 weeks | 61% |
+| Online platform | $200 | Self-paced | 8% |
+> Source: Burning Glass Institute 2024; National Skills Coalition; Company data
 
 ## 2. Our Solution
 
@@ -33,18 +42,22 @@
 - 94% of graduates hired within 60 days
 - Custom pathway design for specific role requirements
 
-## 3. Traction and Ask
+## 3. Traction
 
-### $1.8M ARR, 12,400 active learners, 94% employer satisfaction after 18 months
-- 12,400 learners across 6 US metro areas; 340 employer partners
-- 91% programme completion rate vs 8% industry average
-- $1.8M ARR growing 22% month-over-month for past 6 months
-- Unit economics: $38 CAC, $420 LTV per learner; employer LTV $24,000
+### Three metrics prove SkillBridge has found product-market fit
+**ARR:** $1.8M
+**Completion rate:** 91%
+**Employer NPS:** +74
 > Source: Company internal metrics Q1 2026
 
-### $8M Series A funds 24-month runway to $12M ARR and 3-state government contracts
-- $3.5M: product — expand to 40 vocational pathways, add Spanish-language track
-- $2.5M: employer network — dedicated sales for enterprise and government accounts
-- $2M: technology infrastructure — scale to 100K concurrent learners
+### $8M Series A funds 24-month runway to $12M ARR
+1. Month 1–6: Expand to 40 vocational pathways; launch Spanish-language track
+2. Month 7–12: Enterprise sales team hired; 3 state government contracts signed
+3. Month 13–24: National rollout; 100K concurrent learner capacity operational
 > Source: Company financial model; Board-approved use of funds
+
+### Thank You — Let's Build the Future of Work Together
+<!-- closing -->
+- founders@skillbridge.com
+- https://skillbridge.com
 <!-- notes: Lead investor cares most about employer NPS and completion rate — lead with those -->
