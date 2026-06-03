@@ -249,15 +249,17 @@ uv run pytest tests/test_themes.py     # compile all 10 themes
 
 ## Themes
 
-| Name | Audience | Primary | Accent |
+Each theme uses a community Beamer `.sty` file from CTAN/TeX Live — not just color overrides.
+
+| Name | Audience | Beamer engine | Colors |
 |---|---|---|---|
-| `consulting` | Strategy / MBB pitch | Navy `#003366` | Gold `#C9A84C` |
-| `minimal` | Any — clean, no distraction | Black `#000000` | Gray `#555555` |
-| `dark` | Tech / product demo | Dark navy `#1A1A2E` | Red `#E94560` |
-| `startup` | VC / Series A–B pitch | Orange `#FF6B35` | Teal `#00D4AA` |
-| `academic` | Research / university | Burgundy `#5C1A1A` | Warm gold `#8B6914` |
-| `finance` | Banking / PE / hedge fund | Forest green `#1B4332` | Green `#52B788` |
-| `tech` | Engineering / SaaS / cloud | Deep blue `#0F4C81` | Cyan `#00B4D8` |
-| `government` | Public sector / policy | Dark navy `#1C2B4A` | Flag red `#C0392B` |
-| `healthcare` | Medical / pharma / clinical | Medical blue `#005B96` | Light blue `#48CAE4` |
-| `creative` | Agency / design / media | Purple `#6A0572` | Gold `#FFB703` |
+| `consulting` | Strategy / MBB pitch | [Metropolis](https://github.com/matze/mtheme) + Fira Sans | Navy `#003366`, Gold `#C9A84C` |
+| `startup` | VC / Series A–B pitch | [Trigon](https://ctan.org/pkg/beamertheme-trigon) light | Orange `#FF6B35`, Teal `#00D4AA` |
+| `academic` | Research / university | [Metropolis](https://github.com/matze/mtheme) + Palatino serif | Burgundy `#5C1A1A`, Gold `#8B6914` |
+| `finance` | Banking / PE / hedge fund | [Focus](https://github.com/pcafrica/focus-beamertheme) | Forest green `#1B4332`, white bg |
+| `tech` | Engineering / SaaS / cloud | [Metropolis](https://github.com/matze/mtheme) + Fira Sans | Deep blue `#0F4C81`, Cyan `#00B4D8` |
+| `government` | Public sector / policy | [SimpleDarkBlue](https://github.com/pm25/SimpleDarkBlue-BeamerTheme) | Navy `#1C2B4A`, Red `#C0392B` |
+| `healthcare` | Medical / pharma / clinical | [pure-minimalistic](https://github.com/kai-tub/latex-beamer-pure-minimalistic) | Medical blue `#005B96` accent |
+| `creative` | Agency / design / media | [Trigon](https://ctan.org/pkg/beamertheme-trigon) dark | Purple `#6A0572`, Gold `#FFB703` |
+| `minimal` | Any — zero distraction | [pure-minimalistic](https://github.com/kai-tub/latex-beamer-pure-minimalistic) | Default red accent, white bg |
+| `dark` | Tech demo / product | [Metropolis](https://github.com/matze/mtheme) dark canvas | Dark navy `#1A1A2E`, Red `#E94560` |
