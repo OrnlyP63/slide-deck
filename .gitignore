@@ -40,3 +40,5 @@ htmlcov/
 # Secrets
 .env
 .env.*
+*.pyc
+.ipynb_checkpoints/
